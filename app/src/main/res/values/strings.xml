@@ -23,5 +23,6 @@
   <string name="hippo_text">Hippo</string>
   <string name="buffalo_text">Buffalo</string>
   <string name="elephant_text">Elephant</string>
+  <string name="geometry_text">Geometry</string>
 
 </resources>
