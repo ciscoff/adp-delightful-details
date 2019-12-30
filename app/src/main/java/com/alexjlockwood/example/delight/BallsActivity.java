@@ -1,11 +1,13 @@
 package com.alexjlockwood.example.delight;
 
+import android.graphics.drawable.Animatable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class BallsActivity extends AppCompatActivity {
 
@@ -18,11 +20,8 @@ public class BallsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-//    @OnClick(R.id.rootview)
-//    void onClick() {
-//        ((Animatable) alarmView.getDrawable()).start();
-//        ((Animatable) clockView.getDrawable()).start();
-//        ((Animatable) timerView.getDrawable()).start();
-//        ((Animatable) stopWatchView.getDrawable()).start();
-//    }
+    @OnClick(R.id.balls)
+    void onClick() {
+        ((Animatable) ballsView.getDrawable()).start();
+    }
 }

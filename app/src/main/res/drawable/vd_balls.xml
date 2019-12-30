@@ -1,17 +1,61 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:width="96dp"
-        android:height="24dp"
-        android:viewportWidth="96.0"
-        android:viewportHeight="24.0">
-    <path
-        android:fillColor="#FF0000FF"
-        android:pathData="M12,20c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z"/>
+    android:width="96dp"
+    android:height="48dp"
+    android:viewportWidth="96.0"
+    android:viewportHeight="48.0">
 
     <path
-        android:fillColor="#FFFF0000"
-        android:pathData="M48,20c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z"/>
+        android:pathData="M0,0 l 96,0 0,48 -96,0 0,-96"
+        android:strokeWidth="1"
+        android:strokeColor="#FFFFFFFF" />
 
     <path
-        android:fillColor="#FF00FF00"
-        android:pathData="M84,20c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z"/>
+        android:pathData="M0,32 H96"
+        android:strokeWidth="0.1"
+        android:strokeColor="#FFFFFFFF" />
+
+    <path
+        android:pathData="M12,0 V48"
+        android:strokeWidth="0.1"
+        android:strokeColor="#FFFFFFFF" />
+
+    <path
+        android:pathData="M48,0 V48"
+        android:strokeWidth="0.1"
+        android:strokeColor="#FFFFFFFF" />
+
+    <path
+        android:pathData="M84,0 V48"
+        android:strokeWidth="0.1"
+        android:strokeColor="#FFFFFFFF" />
+
+    <group
+        android:name="scaledBlue"
+        android:pivotX="12"
+        android:pivotY="32">
+        <path
+            android:name="bluePath"
+            android:fillColor="#FF0000FF"
+            android:pathData="M12,40c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z" />
+    </group>
+
+    <group
+        android:name="scaledRed"
+        android:pivotX="48"
+        android:pivotY="32">
+        <path
+            android:name="redPath"
+            android:fillColor="#FFFF0000"
+            android:pathData="M48,40c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z" />
+    </group>
+
+    <group
+        android:name="scaledGreen"
+        android:pivotX="84"
+        android:pivotY="32">
+        <path
+            android:name="greenPath"
+            android:fillColor="#FF00FF00"
+            android:pathData="M84,40c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z" />
+    </group>
 </vector>

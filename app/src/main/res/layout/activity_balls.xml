@@ -20,7 +20,7 @@
             android:contentDescription="@null"
             android:padding="8dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/vd_balls" />
+            app:srcCompat="@drawable/avd_ball" />
 
     </RelativeLayout>
 
