@@ -9,8 +9,21 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
 
+<!--        <ImageView-->
+<!--            android:id="@+id/balls"-->
+<!--            android:layout_width="96dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:contentDescription="@null"-->
+<!--            android:padding="8dp"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            app:srcCompat="@drawable/avd_ball" />-->
+
         <ImageView
-            android:id="@+id/balls"
+            android:id="@+id/iv_jumping_balls"
             android:layout_width="96dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -19,8 +32,7 @@
             android:layout_alignParentBottom="true"
             android:contentDescription="@null"
             android:padding="8dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/avd_ball" />
+            android:scaleType="fitCenter"/>
 
     </RelativeLayout>
 
