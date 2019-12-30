@@ -12,6 +12,7 @@
       android:label="@string/app_name">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
+        <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
@@ -68,6 +69,9 @@
       android:label="@string/app_name"
       android:theme="@style/AppThemeNoActionBar"/>
       <activity android:name="com.alexjlockwood.example.delight.GeometryActivity"
+          android:label="@string/app_name"
+          android:theme="@style/AppThemeNoActionBar"/>
+      <activity android:name=".BallsActivity"
           android:label="@string/app_name"
           android:theme="@style/AppThemeNoActionBar"/>
   </application>
