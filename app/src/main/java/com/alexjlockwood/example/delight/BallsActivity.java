@@ -1,6 +1,5 @@
 package com.alexjlockwood.example.delight;
 
-import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.graphics.drawable.Animatable2Compat;
@@ -10,7 +9,6 @@ import android.widget.ImageView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class BallsActivity extends AppCompatActivity {
 

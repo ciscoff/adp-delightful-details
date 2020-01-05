@@ -10,11 +10,39 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/spinner"
+            style="@style/MainActivityListItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spinner" />
+
+        <TextView
             android:id="@+id/balls"
             style="@style/MainActivityListItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/balls" />
+
+        <TextView
+            android:id="@+id/writer"
+            style="@style/MainActivityListItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/writer" />
+
+        <TextView
+            android:id="@+id/globus"
+            style="@style/MainActivityListItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/globus" />
+
+        <TextView
+            android:id="@+id/my"
+            style="@style/MainActivityListItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my" />
 
         <TextView
             android:id="@+id/animals"

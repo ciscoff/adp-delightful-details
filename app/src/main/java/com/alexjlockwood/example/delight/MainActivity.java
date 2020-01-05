@@ -14,6 +14,10 @@ public class MainActivity extends AppCompatActivity {
     private static final SparseArray<Class<?>> LIST_ITEM_TO_ACTIVITY_MAP = new SparseArray<>();
 
     static {
+        LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.spinner, SpinnerActivity.class);
+        LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.writer, WriterActivity.class);
+        LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.globus, GlobusActivity.class);
+        LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.my, MyHandwritingActivity.class);
         LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.balls, BallsActivity.class);
         LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.animals, AnimalsActivity.class);
         LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.checkable, CheckableActivity.class);
@@ -39,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({
+            R.id.spinner,
+            R.id.my,
+            R.id.writer,
+            R.id.globus,
             R.id.balls,
             R.id.animals,
             R.id.checkable,

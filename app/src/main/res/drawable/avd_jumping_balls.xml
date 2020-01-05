@@ -32,7 +32,7 @@
 
             <objectAnimator
                 android:duration="120"
-                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:interpolator="@android:anim/linear_interpolator"
                 android:propertyName="pathData"
                 android:repeatCount="1"
                 android:repeatMode="reverse"
@@ -47,7 +47,7 @@
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:duration="120"
-                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:interpolator="@android:anim/linear_interpolator"
                 android:propertyName="pathData"
                 android:repeatCount="1"
                 android:repeatMode="reverse"
@@ -62,7 +62,7 @@
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:duration="120"
-                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:interpolator="@android:anim/linear_interpolator"
                 android:propertyName="pathData"
                 android:repeatCount="1"
                 android:repeatMode="reverse"

@@ -1,0 +1,21 @@
+<animated-vector
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:drawable="@drawable/vd_my">
+
+  <target
+    android:name="my_1"
+    android:animation="@animator/my_handwrite"/>
+
+  <target
+    android:name="my_2"
+    android:animation="@animator/my_handwrite"/>
+
+  <target
+    android:name="my_3"
+    android:animation="@animator/my_handwrite"/>
+
+  <target
+    android:name="my_4"
+    android:animation="@animator/my_handwrite"/>
+
+</animated-vector>

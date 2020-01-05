@@ -2,6 +2,9 @@
 
   <string name="app_name">Delightful Details</string>
   <string name="play">Play</string>
+  <string name="spinner">Spinner</string>
+  <string name="globus">Globus</string>
+  <string name="writer">Writer</string>
   <string name="pause">Pause</string>
   <string name="stop">Stop</string>
   <string name="on">On</string>
@@ -20,6 +23,7 @@
   <string name="music">Music</string>
   <string name="downloading">Downloading</string>
   <string name="balls">Balls</string>
+  <string name="my">My</string>
   <string name="animals">Animals</string>
   <string name="hippo_text">Hippo</string>
   <string name="buffalo_text">Buffalo</string>
