@@ -7,7 +7,7 @@
     android:viewportHeight="96">
 
     <group
-        android:name="axis"
+        android:name="axis_for_debug"
         android:translateX="0"
         android:translateY="0">
         <path
@@ -24,10 +24,7 @@
         android:name="pbExternalContainer"
         android:translateX="48"
         android:translateY="48">
-<!--            android:pathData="M0,0 m-24,0 A24,24 0 0,1 24,0 A24,24 0 0,1 -24,0"
--->
-<!--                    android:pathData="M0,0 m24,0 A24,24 0 0,1 -24,0 A24,24 0 0,1 24,0"
--->
+
         <path
             android:name="pbExternal"
             android:fillColor="@android:color/transparent"
@@ -39,49 +36,23 @@
             android:trimPathStart="0"
             android:trimPathEnd="0.03"
             android:trimPathOffset="0" />
-
-        <path
-            android:name="pbExternalCont"
-            android:fillColor="@android:color/transparent"
-            android:pathData="M0,0 m24,0 A24,24 0 0,1 -24,0 A24,24 0 0,1 24,0"
-            android:strokeWidth="4"
-            android:strokeColor="@android:color/background_dark"
-            android:strokeLineCap="square"
-            android:strokeLineJoin="miter"
-            android:trimPathStart="0"
-            android:trimPathEnd="0"
-            android:trimPathOffset="0" />
     </group>
 
+      <group
+          android:name="pbInternalContainer"
+          android:translateX="48"
+          android:translateY="48">
 
-    <!--    <path-->
-    <!--        android:name="pbExternal"-->
-    <!--        android:fillColor="@android:color/transparent"-->
-    <!--        android:pathData="M0,0 m-24,0 a 24,24 0 1,0 48,0 a 24,24 0 1,0 -48,0"-->
-    <!--        android:strokeColor="@android:color/background_dark"-->
-    <!--        android:strokeLineCap="square"-->
-    <!--        android:strokeLineJoin="miter"-->
-    <!--        android:strokeWidth="4"-->
-    <!--        android:trimPathEnd="0.03"-->
-    <!--        android:trimPathOffset="0"-->
-    <!--        android:trimPathStart="0"/>-->
-    <!--  </group>-->
-
-    <!--  <group-->
-    <!--      android:name="pbInternalContainer"-->
-    <!--      android:translateX="48"-->
-    <!--      android:translateY="48">-->
-
-    <!--    <path-->
-    <!--        android:name="pbInternal"-->
-    <!--        android:fillColor="@android:color/transparent"-->
-    <!--        android:pathData="M0,0 m 0,-18 a 18,18 0 1,1 0,36 a 18,18 0 1,1 0,-36"-->
-    <!--        android:strokeColor="@android:color/darker_gray"-->
-    <!--        android:strokeLineCap="square"-->
-    <!--        android:strokeLineJoin="miter"-->
-    <!--        android:strokeWidth="4"-->
-    <!--        android:trimPathEnd="0.03"-->
-    <!--        android:trimPathOffset="0"-->
-    <!--        android:trimPathStart="0"/>-->
-    <!--  </group>-->
+        <path
+            android:name="pbInternal"
+            android:fillColor="@android:color/transparent"
+            android:pathData="M0,0 m18,0 A18,18 0 1,0 -18,0 A18,18 0 1,0 18,0"
+            android:strokeColor="@android:color/darker_gray"
+            android:strokeLineCap="square"
+            android:strokeLineJoin="miter"
+            android:strokeWidth="1.5"
+            android:trimPathEnd="0.03"
+            android:trimPathOffset="0"
+            android:trimPathStart="0"/>
+      </group>
 </vector>
