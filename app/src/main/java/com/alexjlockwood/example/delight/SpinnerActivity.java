@@ -17,6 +17,7 @@ public class SpinnerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_spinner);
         ButterKnife.bind(this);
         ((Animatable) ((ImageView) findViewById(R.id.spinnerOutIcon)).getDrawable()).start();
-    }
+        ((Animatable) ((ImageView) findViewById(R.id.textIcon)).getDrawable()).start();
 
+    }
 }

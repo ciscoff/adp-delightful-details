@@ -2,7 +2,8 @@
 
   <color name="quantum_indigo500">#3f51b5</color>
   <color name="quantum_indigo700">#303f9f</color>
-  <color name="quantum_pinkA200">#ffff81</color>
+  <color name="quantum_pinkA200">#FFA000</color>
+  <color name="custom_bg">#FFECB3</color>
 
   <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
     <item name="colorPrimary">@color/quantum_indigo500</item>
@@ -14,7 +15,7 @@
     <item name="colorPrimary">@color/quantum_indigo500</item>
     <item name="colorPrimaryDark">@color/quantum_indigo700</item>
     <item name="colorAccent">@color/quantum_pinkA200</item>
-    <item name="android:colorBackground">@android:color/holo_blue_dark</item>
+    <item name="android:colorBackground">@color/custom_bg</item>
   </style>
 
   <style name="MainActivityListItem">
@@ -29,5 +30,11 @@
   <style name="CheckableLinearLayoutStyle">
     <item name="android:orientation">vertical</item>
   </style>
+
+
+  <color name="spinner_out">#FF5722</color>
+  <color name="spinner_in">#795548</color>
+  <color name="spinner_text">@color/spinner_out</color>
+
 
 </resources>

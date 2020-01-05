@@ -5,21 +5,30 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <FrameLayout
         android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/spinnerOutIcon"
-            android:layout_width="match_parent"
+            android:layout_width="308dp"
             android:layout_height="200dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
             android:layout_marginBottom="64dp"
             android:contentDescription="@null"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/avd_spinner" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/textIcon"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="55dp"
+            android:maxWidth="240dp"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/avd_android_spinner" />
+    </FrameLayout>
+
 </RelativeLayout>

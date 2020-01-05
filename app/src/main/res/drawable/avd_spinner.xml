@@ -9,7 +9,7 @@
                     android:duration="1000"
                     android:propertyName="translateX"
                     android:valueFrom="-200"
-                    android:valueTo="48" />
+                    android:valueTo="154" />
             </set>
         </aapt:attr>
     </target>
@@ -20,8 +20,8 @@
                 <objectAnimator
                     android:duration="1000"
                     android:propertyName="translateX"
-                    android:valueFrom="200"
-                    android:valueTo="48" />
+                    android:valueFrom="400"
+                    android:valueTo="154" />
             </set>
         </aapt:attr>
     </target>
@@ -81,7 +81,7 @@
                         android:propertyName="trimPathEnd"
                         android:repeatCount="0"
                         android:valueFrom="0.03"
-                        android:valueTo="0.90"
+                        android:valueTo="0.85"
                         android:valueType="floatType" />
                     <objectAnimator
                         android:duration="2000"
@@ -89,7 +89,7 @@
                         android:propertyName="trimPathStart"
                         android:repeatCount="0"
                         android:valueFrom="0.0"
-                        android:valueTo="0.10"
+                        android:valueTo="0.15"
                         android:valueType="floatType" />
                 </set>
             </set>
@@ -162,6 +162,32 @@
                         android:valueTo="0.15"
                         android:valueType="floatType" />
                 </set>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target android:name="pbExternalContainer">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:startOffset="7000"
+                    android:duration="500"
+                    android:propertyName="translateX"
+                    android:valueFrom="154"
+                    android:valueTo="42" />
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target android:name="pbInternalContainer">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:startOffset="7000"
+                    android:duration="500"
+                    android:propertyName="translateX"
+                    android:valueFrom="154"
+                    android:valueTo="42" />
             </set>
         </aapt:attr>
     </target>

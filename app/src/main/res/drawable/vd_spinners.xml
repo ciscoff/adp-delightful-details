@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="96dp"
-    android:height="96dp"
-    android:viewportWidth="96"
-    android:viewportHeight="96">
+    android:width="308dp"
+    android:height="68dp"
+    android:viewportWidth="308"
+    android:viewportHeight="68">
 
     <group
         android:name="axis_for_debug"
         android:translateX="0"
         android:translateY="0">
         <path
-            android:pathData="M0,48 L96,48 "
+            android:pathData="M0,34 L308,34 "
             android:strokeWidth="0.1"
             android:strokeColor="@android:color/holo_blue_dark" />
         <path
-            android:pathData="M48,0 L48,96 "
+            android:pathData="M154,0 L154,68"
             android:strokeWidth="0.1"
             android:strokeColor="@android:color/holo_blue_dark" />
     </group>
 
     <group
         android:name="pbExternalContainer"
-        android:translateX="48"
-        android:translateY="48">
-
+        android:translateX="154"
+        android:translateY="34">
         <path
             android:name="pbExternal"
             android:fillColor="@android:color/transparent"
-            android:pathData="M0,0 m24,0 A24,24 0 0,1 -24,0 A24,24 0 0,1 24,0"
-            android:strokeWidth="6"
-            android:strokeColor="#5D4037"
+            android:pathData="M0,0 m30,0 A30,30 0 0,1 -30,0 A30,30 0 0,1 30,0"
+            android:strokeWidth="8"
+            android:strokeColor="@color/spinner_out"
             android:strokeLineCap="square"
             android:strokeLineJoin="miter"
             android:trimPathStart="0"
@@ -39,17 +38,16 @@
 
       <group
           android:name="pbInternalContainer"
-          android:translateX="48"
-          android:translateY="48">
-
+          android:translateX="154"
+          android:translateY="34">
         <path
             android:name="pbInternal"
             android:fillColor="@android:color/transparent"
-            android:pathData="M0,0 m18,0 A18,18 0 1,0 -18,0 A18,18 0 1,0 18,0"
-            android:strokeColor="#F0F4C3"
+            android:pathData="M0,0 m24,0 A24,24 0 1,0 -24,0 A24,24 0 1,0 24,0"
+            android:strokeColor="@color/spinner_in"
             android:strokeLineCap="square"
             android:strokeLineJoin="miter"
-            android:strokeWidth="2.5"
+            android:strokeWidth="3"
             android:trimPathEnd="0.03"
             android:trimPathOffset="0"
             android:trimPathStart="0"/>
