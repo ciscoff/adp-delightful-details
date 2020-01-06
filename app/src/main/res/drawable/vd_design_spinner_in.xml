@@ -5,26 +5,26 @@
     android:viewportWidth="96"
     android:viewportHeight="96">
 
-    <group
-        android:name="axis_for_debug"
-        android:translateX="0"
-        android:translateY="0">
-        <path
-            android:pathData="M0,48 L96,48 "
-            android:strokeWidth="0.1"
-            android:strokeColor="@android:color/holo_blue_dark" />
-        <path
-            android:pathData="M48,0 L48,96"
-            android:strokeWidth="0.1"
-            android:strokeColor="@android:color/holo_blue_dark" />
-    </group>
+<!--    <group-->
+<!--        android:name="axis_for_debug"-->
+<!--        android:translateX="0"-->
+<!--        android:translateY="0">-->
+<!--        <path-->
+<!--            android:pathData="M0,48 L96,48 "-->
+<!--            android:strokeWidth="0.1"-->
+<!--            android:strokeColor="@android:color/holo_blue_dark" />-->
+<!--        <path-->
+<!--            android:pathData="M48,0 L48,96"-->
+<!--            android:strokeWidth="0.1"-->
+<!--            android:strokeColor="@android:color/holo_blue_dark" />-->
+<!--    </group>-->
 
     <group
-        android:name="pbInternalContainer"
+        android:name="groupSpinner"
         android:translateX="48"
         android:translateY="48">
         <path
-            android:name="pbInternal"
+            android:name="pathSpinner"
             android:fillColor="@android:color/transparent"
             android:pathData="M0,0 m24,0 A24,24 0 1,0 -24,0 A24,24 0 1,0 24,0"
             android:strokeWidth="3"
