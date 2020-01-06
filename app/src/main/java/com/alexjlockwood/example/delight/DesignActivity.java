@@ -15,10 +15,7 @@ public class DesignActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_design);
         ButterKnife.bind(this);
-        ((Animatable) ((ImageView) findViewById(R.id.designIcon)).getDrawable()).start();
-        ((Animatable) ((ImageView) findViewById(R.id.designIcon1)).getDrawable()).start();
-
-//        ((Animatable) ((ImageView) findViewById(R.id.textIcon)).getDrawable()).start();
-
+        ((Animatable) ((ImageView) findViewById(R.id.designIconLeft)).getDrawable()).start();
+        ((Animatable) ((ImageView) findViewById(R.id.designIconRight)).getDrawable()).start();
     }
 }

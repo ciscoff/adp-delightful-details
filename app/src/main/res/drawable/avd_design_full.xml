@@ -1,0 +1,199 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/vd_design_figures">
+
+    <!-- Перемещение спинера SpinnerOut по экрану -->
+    <target android:name="groupSpinnerOut">
+        <aapt:attr name="android:animation">
+            <set android:ordering="sequentially">
+                <!-- Перемещение слева к центру -->
+                <set android:ordering="together">
+                    <!-- Выход на экран -->
+                    <objectAnimator
+                        android:duration="1000"
+                        android:propertyName="translateX"
+                        android:valueFrom="-200"
+                        android:valueTo="100" />
+                </set>
+                <!-- Перемещение от центра -->
+                <set android:ordering="together">
+                    <objectAnimator
+                        android:duration="500"
+                        android:propertyName="translateX"
+                        android:startOffset="7000"
+                        android:valueFrom="100"
+                        android:valueTo="90" />
+                    <objectAnimator
+                        android:duration="500"
+                        android:propertyName="translateY"
+                        android:startOffset="7000"
+                        android:valueFrom="100"
+                        android:valueTo="80" />
+                </set>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <!-- Перемещение спинера SpinnerIn по экрану -->
+    <target android:name="groupSpinnerIn">
+        <aapt:attr name="android:animation">
+            <set android:ordering="sequentially">
+                <objectAnimator
+                    android:duration="1000"
+                    android:propertyName="translateX"
+                    android:valueFrom="400"
+                    android:valueTo="100" />
+                <set android:ordering="together">
+                    <objectAnimator
+                        android:duration="500"
+                        android:propertyName="translateX"
+                        android:startOffset="7000"
+                        android:valueFrom="100"
+                        android:valueTo="110" />
+                    <objectAnimator
+                        android:duration="500"
+                        android:propertyName="translateY"
+                        android:startOffset="7000"
+                        android:valueFrom="100"
+                        android:valueTo="120" />
+                </set>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <!-- Вращение внешнего спинера -->
+    <target android:name="pathSpinnerOut">
+        <aapt:attr name="android:animation">
+            <set android:ordering="sequentially">
+                <set android:ordering="together">
+                    <!-- "Хвост" медленно стартует, а в конце быстро догоняет голову-->
+                    <objectAnimator
+                        android:duration="1333"
+                        android:propertyName="trimPathStart"
+                        android:repeatCount="2"
+                        android:valueFrom="0"
+                        android:valueTo="0.80"
+                        android:valueType="floatType">
+                        <!-- Медленный старт, быстрый финиш -->
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator android:pathData="L0.5,0 C 0.7,0 0.6,1 1,1" />
+                        </aapt:attr>
+                    </objectAnimator>
+
+                    <!-- "Голова" стартует быстро и убегает от хвоста -->
+                    <objectAnimator
+                        android:duration="1333"
+                        android:propertyName="trimPathEnd"
+                        android:repeatCount="2"
+                        android:valueFrom="0.03"
+                        android:valueTo="0.83"
+                        android:valueType="floatType">
+                        <!-- Быстрый старт, медленный финиш -->
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator android:pathData="C0.2,0 0.1,1 0.5,0.96 C 0.96666666666,0.96 0.99333333333,1 1,1" />
+                        </aapt:attr>
+                    </objectAnimator>
+
+                    <objectAnimator
+                        android:duration="1333"
+                        android:interpolator="@android:anim/linear_interpolator"
+                        android:propertyName="trimPathOffset"
+                        android:repeatCount="2"
+                        android:valueFrom="0"
+                        android:valueTo="0.20"
+                        android:valueType="floatType" />
+                </set>
+
+                <!-- Остановка вращения, восстановление параметров trim -->
+                <set>
+                    <objectAnimator
+                        android:duration="1000"
+                        android:propertyName="trimPathOffset"
+                        android:repeatCount="0"
+                        android:valueFrom="0"
+                        android:valueTo="0"
+                        android:valueType="floatType" />
+                    <objectAnimator
+                        android:duration="1000"
+                        android:interpolator="@android:anim/linear_interpolator"
+                        android:propertyName="trimPathEnd"
+                        android:repeatCount="0"
+                        android:valueFrom="0.03"
+                        android:valueTo="1"
+                        android:valueType="floatType" />
+                    <objectAnimator
+                        android:duration="1000"
+                        android:interpolator="@android:anim/linear_interpolator"
+                        android:propertyName="trimPathStart"
+                        android:repeatCount="0"
+                        android:valueFrom="0"
+                        android:valueTo="0"
+                        android:valueType="floatType" />
+                </set>
+
+                <!-- Превращение в квадрат -->
+                <set>
+                    <objectAnimator
+                        android:duration="400"
+                        android:interpolator="@android:interpolator/fast_out_slow_in"
+                        android:propertyName="pathData"
+                        android:valueFrom="M 0 -30 C -7.953 -30 -15.589 -26.837 -21.213 -21.213 C -26.837 -15.589 -30 -7.953 -30 0 C -30 7.953 -26.837 15.589 -21.213 21.213 C -15.589 26.837 -7.953 30 0 30 C 7.953 30 15.589 26.837 21.213 21.213 C 26.837 15.589 30 7.953 30 0 C 30 -4.193 29.121 -8.299 27.465 -12.067 C 25.98 -15.446 23.872 -18.554 21.213 -21.213 C 15.589 -26.837 7.953 -30 0 -30"
+                        android:valueTo="M 28 -30 C 9.333 -30 -9.333 -30 -28 -30 C -28.104 -30 -30 -29.104 -30 -28 C -30 -9.333 -30 9.333 -30 28 C -30 29.104 -29.104 30 -28 30 C -9.333 30 9.333 30 28 30 C 29.104 30 30 29.104 30 28 C 30 9.333 30 -9.333 30 -28 C 30 -29.104 29.104 -30 28 -30 C 28 -30 28 -30 28 -30"
+                        android:valueType="pathType" />
+                </set>
+
+            </set>
+        </aapt:attr>
+    </target>
+
+    <!-- Вращение внутреннего спинера -->
+    <!--    <target android:name="pathSpinnerIn">-->
+    <!--        <aapt:attr name="android:animation">-->
+    <!--            <set android:ordering="sequentially">-->
+    <!--                <set android:ordering="together">-->
+    <!--                    &lt;!&ndash; "Хвост" медленно стартует, а в конце быстро догоняет голову&ndash;&gt;-->
+    <!--                    <objectAnimator-->
+    <!--                        android:duration="1333"-->
+    <!--                        android:propertyName="trimPathStart"-->
+    <!--                        android:repeatCount="8"-->
+    <!--                        android:valueFrom="0"-->
+    <!--                        android:valueTo="0.80"-->
+    <!--                        android:valueType="floatType">-->
+    <!--                        &lt;!&ndash; Медленный старт, быстрый финиш &ndash;&gt;-->
+    <!--                        <aapt:attr name="android:interpolator">-->
+    <!--                            <pathInterpolator android:pathData="L0.5,0 C 0.7,0 0.6,1 1,1" />-->
+    <!--                        </aapt:attr>-->
+    <!--                    </objectAnimator>-->
+
+    <!--                    &lt;!&ndash; "Голова" стартует быстро и убегает от хвоста &ndash;&gt;-->
+    <!--                    <objectAnimator-->
+    <!--                        android:duration="1333"-->
+    <!--                        android:propertyName="trimPathEnd"-->
+    <!--                        android:repeatCount="8"-->
+    <!--                        android:valueFrom="0.03"-->
+    <!--                        android:valueTo="0.83"-->
+    <!--                        android:valueType="floatType">-->
+    <!--                        &lt;!&ndash; Быстрый старт, медленный финиш &ndash;&gt;-->
+    <!--                        <aapt:attr name="android:interpolator">-->
+    <!--                            <pathInterpolator android:pathData="C0.2,0 0.1,1 0.5,0.96 C 0.96666666666,0.96 0.99333333333,1 1,1" />-->
+    <!--                        </aapt:attr>-->
+    <!--                    </objectAnimator>-->
+
+    <!--                    <objectAnimator-->
+    <!--                        android:duration="1333"-->
+    <!--                        android:interpolator="@android:anim/linear_interpolator"-->
+    <!--                        android:propertyName="trimPathOffset"-->
+    <!--                        android:repeatCount="8"-->
+    <!--                        android:valueFrom="0"-->
+    <!--                        android:valueTo="0.20"-->
+    <!--                        android:valueType="floatType" />-->
+    <!--                </set>-->
+
+    <!--                &lt;!&ndash; Позиционирование остановки вращения внутреннего спинера &ndash;&gt;-->
+    <!--&lt;!&ndash;                <set>&ndash;&gt;-->
+    <!--&lt;!&ndash;                </set>&ndash;&gt;-->
+    <!--            </set>-->
+    <!--        </aapt:attr>-->
+    <!--    </target>-->
+
+</animated-vector>

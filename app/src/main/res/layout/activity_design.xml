@@ -11,34 +11,23 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/designIcon"
+            android:id="@+id/designIconLeft"
             android:layout_width="308dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginBottom="64dp"
             android:contentDescription="@null"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/avd_design_anim_out" />
+            app:srcCompat="@drawable/avd_design_left" />
 
         <ImageView
-            android:id="@+id/designIcon1"
+            android:id="@+id/designIconRight"
             android:layout_width="308dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginBottom="64dp"
             android:contentDescription="@null"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/avd_design_anim_in" />
-
-<!--        <ImageView-->
-<!--            android:id="@+id/textIcon"-->
-<!--            android:layout_width="240dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:layout_marginBottom="55dp"-->
-<!--            android:maxWidth="240dp"-->
-<!--            android:contentDescription="@null"-->
-<!--            app:srcCompat="@drawable/avd_android_spinner" />-->
+            app:srcCompat="@drawable/avd_design_right" />
     </FrameLayout>
-
 </RelativeLayout>

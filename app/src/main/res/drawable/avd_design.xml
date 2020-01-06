@@ -10,7 +10,7 @@
                     android:duration="1000"
                     android:propertyName="translateX"
                     android:valueFrom="-200"
-                    android:valueTo="154" />
+                    android:valueTo="100" />
             </set>
         </aapt:attr>
     </target>
@@ -22,7 +22,7 @@
                     android:duration="1000"
                     android:propertyName="translateX"
                     android:valueFrom="400"
-                    android:valueTo="154" />
+                    android:valueTo="100" />
             </set>
         </aapt:attr>
     </target>
@@ -181,8 +181,8 @@
                     android:duration="500"
                     android:propertyName="translateX"
                     android:startOffset="7000"
-                    android:valueFrom="154"
-                    android:valueTo="100" />
+                    android:valueFrom="100"
+                    android:valueTo="90" />
             </set>
         </aapt:attr>
     </target>
@@ -206,8 +206,8 @@
                     android:duration="500"
                     android:propertyName="translateX"
                     android:startOffset="7000"
-                    android:valueFrom="154"
-                    android:valueTo="170" />
+                    android:valueFrom="100"
+                    android:valueTo="110" />
             </set>
         </aapt:attr>
     </target>
