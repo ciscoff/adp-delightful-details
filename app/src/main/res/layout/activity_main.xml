@@ -10,6 +10,13 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/design"
+            style="@style/MainActivityListItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/design" />
+
+        <TextView
             android:id="@+id/spinner"
             style="@style/MainActivityListItem"
             android:layout_width="match_parent"

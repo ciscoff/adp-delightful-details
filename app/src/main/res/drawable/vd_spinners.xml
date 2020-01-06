@@ -40,7 +40,7 @@
           android:name="pbInternalContainer"
           android:translateX="154"
           android:translateY="34">
-        <path
+          <path
             android:name="pbInternal"
             android:fillColor="@android:color/transparent"
             android:pathData="M0,0 m24,0 A24,24 0 1,0 -24,0 A24,24 0 1,0 24,0"
