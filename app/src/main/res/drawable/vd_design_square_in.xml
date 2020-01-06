@@ -5,29 +5,15 @@
     android:viewportWidth="96"
     android:viewportHeight="96">
 
-<!--    <group-->
-<!--        android:name="axis_for_debug"-->
-<!--        android:translateX="0"-->
-<!--        android:translateY="0">-->
-<!--        <path-->
-<!--            android:pathData="M0,48 L96,48 "-->
-<!--            android:strokeWidth="0.1"-->
-<!--            android:strokeColor="@android:color/holo_blue_dark" />-->
-<!--        <path-->
-<!--            android:pathData="M48,0 L48,96"-->
-<!--            android:strokeWidth="0.1"-->
-<!--            android:strokeColor="@android:color/holo_blue_dark" />-->
-<!--    </group>-->
-
     <group
         android:name="groupSquare"
         android:translateX="48"
         android:translateY="48">
         <path
             android:name="pathSquare"
-            android:fillColor="@android:color/transparent"
+            android:fillColor="#FFA0A0"
             android:pathData="M 22.0,-24.0 c 0.0,0.0 -44.0,0.0 -44.0,0.0 c -1.1044921875,0.0 -2.0,0.8955078125 -2.0,2.0 c 0.0,0.0 0.0,44.0 0.0,44.0 c 0.0,1.1044921875 0.8955078125,2.0 2.0,2.0 c 0.0,0.0 44.0,0.0 44.0,0.0 c 1.1044921875,0.0 2.0,-0.8955078125 2.0,-2.0 c 0.0,0.0 0.0,-44.0 0.0,-44.0 c 0.0,-1.1044921875 -0.8955078125,-2.0 -2.0,-2.0 c 0.0,0.0 0.0,0.0 0.0,0.0"
             android:strokeWidth="3"
-            android:strokeColor="@color/spinner_in" />
+            android:strokeColor="#795548"/>
     </group>
 </vector>
