@@ -15,14 +15,14 @@
                 <path
                     android:name="pathSpinnerIn"
                     android:fillColor="@android:color/transparent"
-                    android:pathData="M24,0 A24,24 0 1,0 -24,0 A24,24 0 1,0 24,0"
+                    android:pathData="M24,0 A24,24 0 0,0 -24,0 A24,24 0 0,0 24,0"
+                    android:strokeWidth="3"
                     android:strokeColor="@color/spinner_in"
                     android:strokeLineCap="square"
                     android:strokeLineJoin="miter"
-                    android:strokeWidth="3"
+                    android:trimPathStart="0"
                     android:trimPathEnd="0.03"
-                    android:trimPathOffset="0"
-                    android:trimPathStart="0"/>
+                    android:trimPathOffset="0" />
             </group>
         </vector>
     </aapt:attr>
@@ -35,23 +35,30 @@
                 <set android:ordering="together">
                     <!-- Выход на экран -->
                     <objectAnimator
-                        android:duration="1000"
+                        android:duration="500"
                         android:propertyName="translateX"
                         android:valueFrom="400"
                         android:valueTo="100" />
+                    <objectAnimator
+                        android:duration="2000"
+                        android:interpolator="@android:anim/linear_interpolator"
+                        android:propertyName="rotation"
+                        android:valueFrom="0"
+                        android:valueTo="270"
+                        android:valueType="floatType"/>
                 </set>
                 <!-- EXIT: Перемещение от центра -->
                 <set android:ordering="together">
                     <objectAnimator
                         android:duration="500"
                         android:propertyName="translateX"
-                        android:startOffset="7000"
+                        android:startOffset="3000"
                         android:valueFrom="100"
                         android:valueTo="110" />
                     <objectAnimator
                         android:duration="500"
                         android:propertyName="translateY"
-                        android:startOffset="7000"
+                        android:startOffset="3000"
                         android:valueFrom="100"
                         android:valueTo="120" />
                 </set>
@@ -66,7 +73,7 @@
                 <set android:ordering="together">
                     <!-- "Хвост" медленно стартует, а в конце быстро догоняет голову-->
                     <objectAnimator
-                        android:duration="1333"
+                        android:duration="1000"
                         android:propertyName="trimPathStart"
                         android:repeatCount="2"
                         android:valueFrom="0"
@@ -80,7 +87,7 @@
 
                     <!-- "Голова" стартует быстро и убегает от хвоста -->
                     <objectAnimator
-                        android:duration="1333"
+                        android:duration="1000"
                         android:propertyName="trimPathEnd"
                         android:repeatCount="2"
                         android:valueFrom="0.03"
@@ -93,7 +100,7 @@
                     </objectAnimator>
 
                     <objectAnimator
-                        android:duration="1333"
+                        android:duration="1000"
                         android:interpolator="@android:anim/linear_interpolator"
                         android:propertyName="trimPathOffset"
                         android:repeatCount="2"
@@ -104,14 +111,14 @@
                 <!-- Остановка вращения, восстановление параметров trim -->
                 <set>
                     <objectAnimator
-                        android:duration="1000"
+                        android:duration="700"
                         android:propertyName="trimPathOffset"
                         android:repeatCount="0"
                         android:valueFrom="0"
                         android:valueTo="0"
                         android:valueType="floatType" />
                     <objectAnimator
-                        android:duration="1000"
+                        android:duration="700"
                         android:interpolator="@android:anim/linear_interpolator"
                         android:propertyName="trimPathEnd"
                         android:repeatCount="0"
@@ -119,7 +126,7 @@
                         android:valueTo="1"
                         android:valueType="floatType" />
                     <objectAnimator
-                        android:duration="1000"
+                        android:duration="700"
                         android:interpolator="@android:anim/linear_interpolator"
                         android:propertyName="trimPathStart"
                         android:repeatCount="0"
@@ -131,11 +138,11 @@
                 <!-- Превращение в квадрат -->
                 <set>
                     <objectAnimator
-                        android:duration="400"
+                        android:duration="500"
                         android:interpolator="@android:interpolator/fast_out_slow_in"
                         android:propertyName="pathData"
-                        android:valueFrom="M 0 -24 C -6.363 -24 -12.471 -21.47 -16.971 -16.971 C -21.47 -12.471 -24 -6.363 -24 0 C -24 6.363 -21.47 12.471 -16.971 16.971 C -12.471 21.47 -6.363 24 0 24 C 6.363 24 12.471 21.47 16.971 16.971 C 21.47 12.471 24 6.363 24 0 C 24 -3.265 23.334 -6.463 22.077 -9.411 C 20.885 -12.208 19.161 -14.78 16.971 -16.971 C 12.471 -21.47 6.363 -24 0 -24"
-                        android:valueTo="M 22 -24 C 7.333 -24 -7.333 -24 -22 -24 C -23.104 -24 -24 -23.104 -24 -22 C -24 -7.333 -24 7.333 -24 22 C -24 23.104 -23.104 24 -22 24 C -7.333 24 7.333 24 22 24 C 23.104 24 24 23.104 24 22 C 24 7.333 24 -7.333 24 -22 C 24 -23.104 23.104 -24 22 -24 C 22 -24 22 -24 22 -24"
+                        android:valueFrom="M 0 -24 C 6.363 -24 12.471 -21.47 16.971 -16.971 C 21.47 -12.471 24 -6.363 24 0 C 24 6.363 21.47 12.471 16.971 16.971 C 12.471 21.47 6.363 24 0 24 C -6.363 24 -12.471 21.47 -16.971 16.971 C -21.47 12.471 -24 6.363 -24 0 C -24 -6.363 -21.47 -12.471 -16.971 -16.971 C -14.871 -19.071 -12.421 -20.741 -9.758 -21.926 C -6.715 -23.28 -3.394 -24 0 -24"
+                        android:valueTo="M 22 -24 C 22 -24 22 -24 22 -24 C 23.104 -24 24 -23.104 24 -22 C 24 -7.333 24 7.333 24 22 C 24 23.104 23.104 24 22 24 C 7.333 24 -7.333 24 -22 24 C -23.104 24 -24 23.104 -24 22 C -24 7.333 -24 -7.333 -24 -22 C -24 -23.104 -23.104 -24 -22 -24 C -7.333 -24 7.333 -24 22 -24"
                         android:valueType="pathType" />
                 </set>
             </set>
