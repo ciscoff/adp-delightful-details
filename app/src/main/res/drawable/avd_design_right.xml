@@ -24,8 +24,56 @@
                     android:trimPathEnd="0.03"
                     android:trimPathOffset="0" />
             </group>
+
+            <group
+                android:name="groupLineIn"
+                android:translateX="100"
+                android:translateY="100">
+                <path
+                    android:name="pathLineIn"
+                    android:fillColor="@android:color/transparent"
+                    android:valueFrom="M 24 0 C 22.4 0 20.8 0 19.2 0 C 17.561 0 15.922 0 14.283 0 C 12.488 0 10.693 0 8.898 0 C 6.556 0 4.215 0 1.873 0 C -0.156 0 -2.185 0 -4.215 0 C -6.556 0 -8.898 0 -11.239 0 C -13.502 0 -15.766 0 -18.029 0 C -20.02 0 -22.01 0 -24 0"                    android:strokeWidth="8"
+                    android:strokeColor="@color/spinner_in"
+                    android:strokeLineCap="round"
+                    android:strokeLineJoin="miter" />
+            </group>
         </vector>
     </aapt:attr>
+
+    <!-- Перемещение LineIn по экрану [end: 1000 ms] -->
+    <target android:name="groupLineIn">
+        <aapt:attr name="android:animation">
+            <!-- ENTER: Перемещение справа к центру -->
+            <objectAnimator
+                android:duration="1000"
+                android:propertyName="translateX"
+                android:valueFrom="400"
+                android:valueTo="100" />
+
+        </aapt:attr>
+    </target>
+
+    <!-- Превращение LineIn в круг и уход с экрана [end: 1500 ms] -->
+    <target android:name="pathLineIn">
+        <aapt:attr name="android:animation">
+            <set android:ordering="sequentially">
+                <objectAnimator
+                    android:duration="500"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"
+                    android:propertyName="pathData"
+                    android:startOffset="1000"
+                    android:valueFrom="M 24 0 C 22.4 0 20.8 0 19.2 0 C 17.561 0 15.922 0 14.283 0 C 12.488 0 10.693 0 8.898 0 C 6.556 0 4.215 0 1.873 0 C -0.156 0 -2.185 0 -4.215 0 C -6.556 0 -8.898 0 -11.239 0 C -13.502 0 -15.766 0 -18.029 0 C -20.02 0 -22.01 0 -24 0"
+                    android:valueTo="M 24 0 C 24 6.363 21.47 12.471 16.971 16.971 C 12.471 21.47 6.363 24 0 24 C -6.363 24 -12.471 21.47 -16.971 16.971 C -21.47 12.471 -24 6.363 -24 0 C -24 -6.363 -21.47 -12.471 -16.971 -16.971 C -12.471 -21.47 -6.363 -24 0 -24 C 6.363 -24 12.471 -21.47 16.971 -16.971 C 21.47 -12.471 24 -6.363 24 0"
+                    android:valueType="pathType" />
+                <objectAnimator
+                    android:duration="50"
+                    android:propertyName="trimPathEnd"
+                    android:valueFrom="1"
+                    android:valueTo="0"
+                    android:valueType="floatType"/>
+            </set>
+        </aapt:attr>
+    </target>
 
     <!-- Перемещение спинера SpinnerIn по экрану -->
     <target android:name="groupSpinnerIn">
@@ -34,13 +82,14 @@
                 <!-- ENTER: Перемещение слева к центру -->
                 <set android:ordering="together">
                     <!-- Выход на экран -->
-                    <objectAnimator
-                        android:duration="500"
-                        android:propertyName="translateX"
-                        android:valueFrom="400"
-                        android:valueTo="100" />
+<!--                    <objectAnimator-->
+<!--                        android:duration="500"-->
+<!--                        android:propertyName="translateX"-->
+<!--                        android:valueFrom="400"-->
+<!--                        android:valueTo="100" />-->
                     <objectAnimator
                         android:duration="2000"
+                        android:startOffset="1500"
                         android:interpolator="@android:anim/linear_interpolator"
                         android:propertyName="rotation"
                         android:valueFrom="0"
@@ -52,13 +101,13 @@
                     <objectAnimator
                         android:duration="500"
                         android:propertyName="translateX"
-                        android:startOffset="3000"
+                        android:startOffset="5700"
                         android:valueFrom="100"
                         android:valueTo="80" />
                     <objectAnimator
                         android:duration="500"
                         android:propertyName="translateY"
-                        android:startOffset="3000"
+                        android:startOffset="5700"
                         android:valueFrom="100"
                         android:valueTo="120" />
                 </set>
@@ -70,6 +119,17 @@
     <target android:name="pathSpinnerIn">
         <aapt:attr name="android:animation">
             <set android:ordering="sequentially">
+                <!-- Установить path спиннера в исходное положение-->
+                <set>
+                    <objectAnimator
+                        android:duration="50"
+                        android:startOffset="1450"
+                        android:propertyName="trimPathEnd"
+                        android:valueFrom="0.0"
+                        android:valueTo="0.03"
+                        android:valueType="floatType"/>
+                </set>
+
                 <set android:ordering="together">
                     <!-- "Хвост" медленно стартует, а в конце быстро догоняет голову-->
                     <objectAnimator

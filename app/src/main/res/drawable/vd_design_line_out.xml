@@ -10,10 +10,10 @@
         android:translateX="48"
         android:translateY="48">
         <path
-            android:name="pathSpinner"
+            android:name="pathLine"
             android:fillColor="#FFA0A0"
-            android:pathData="M24,0 A24,24 0 1,0 -24,0 A24,24 0 1,0 24,0"
-            android:strokeWidth="3"
-            android:strokeColor="#795548"/>
+            android:pathData="M-30, 0, L30, 0"
+            android:strokeWidth="6"
+            android:strokeColor="#FF5722" />
     </group>
 </vector>
