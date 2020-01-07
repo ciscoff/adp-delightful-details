@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="btn_checkbox_unchecked"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <group
+        android:name="groupSquare"
+        android:translateX="48"
+        android:translateY="48">
+        <path
+            android:name="pathSquare"
+            android:fillColor="#FFA0A0"
+            android:pathData="M 22.0,-24.0 c 0.0,0.0 -44.0,0.0 -44.0,0.0 c -1.1044921875,0.0 -2.0,0.8955078125 -2.0,2.0 c 0.0,0.0 0.0,44.0 0.0,44.0 c 0.0,1.1044921875 0.8955078125,2.0 2.0,2.0 c 0.0,0.0 44.0,0.0 44.0,0.0 c 1.1044921875,0.0 2.0,-0.8955078125 2.0,-2.0 c 0.0,0.0 0.0,-44.0 0.0,-44.0 c 0.0,-1.1044921875 -0.8955078125,-2.0 -2.0,-2.0 c 0.0,0.0 0.0,0.0 0.0,0.0"
+            android:strokeWidth="3"
+            android:strokeColor="#795548"/>
+    </group>
+</vector>

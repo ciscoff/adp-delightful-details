@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+
+        <vector
+            android:width="96dp"
+            android:height="48dp"
+            android:viewportWidth="96.0"
+            android:viewportHeight="48.0">
+
+            <path
+                android:name="bluePath"
+                android:fillColor="#FF0000FF"
+                android:pathData="M12,40c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z" />
+
+            <path
+                android:name="redPath"
+                android:fillColor="#FFFF0000"
+                android:pathData="M48,40c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z" />
+
+            <path
+                android:name="greenPath"
+                android:fillColor="#FF00FF00"
+                android:pathData="M84,40c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z" />
+        </vector>
+    </aapt:attr>
+
+    <target android:name="bluePath">
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:duration="120"
+                android:interpolator="@android:anim/linear_interpolator"
+                android:propertyName="pathData"
+                android:repeatCount="1"
+                android:repeatMode="reverse"
+                android:startOffset="300"
+                android:valueFrom="M12,40c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z"
+                android:valueTo="M12,20c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="redPath">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="120"
+                android:interpolator="@android:anim/linear_interpolator"
+                android:propertyName="pathData"
+                android:repeatCount="1"
+                android:repeatMode="reverse"
+                android:startOffset="400"
+                android:valueFrom="M48,40c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z"
+                android:valueTo="M48,20c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="greenPath">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="120"
+                android:interpolator="@android:anim/linear_interpolator"
+                android:propertyName="pathData"
+                android:repeatCount="1"
+                android:repeatMode="reverse"
+                android:startOffset="500"
+                android:valueFrom="M84,40c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z"
+                android:valueTo="M84,20c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8z"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+</animated-vector>

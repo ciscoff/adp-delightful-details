@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <group
+        android:name="axis_for_debug"
+        android:translateX="0"
+        android:translateY="0">
+        <path
+            android:pathData="M0,100 L308,100 "
+            android:strokeWidth="0.1"
+            android:strokeColor="@android:color/holo_blue_dark" />
+        <path
+            android:pathData="M100,0 L100,200"
+            android:strokeWidth="0.1"
+            android:strokeColor="@android:color/holo_blue_dark" />
+    </group>
+
+    <group
+        android:name="groupSpinnerOut"
+        android:translateX="100"
+        android:translateY="100">
+        <path
+            android:name="pathSpinnerOut"
+            android:fillColor="@android:color/transparent"
+            android:pathData="M30,0 A30,30 0 0,1 -30,0 A30,30 0 0,1 30,0"
+            android:strokeWidth="8"
+            android:strokeColor="@color/spinner_out"
+            android:strokeLineCap="square"
+            android:strokeLineJoin="miter"
+            android:trimPathStart="0"
+            android:trimPathEnd="0.03"
+            android:trimPathOffset="0" />
+    </group>
+
+    <group
+        android:name="groupSpinnerIn"
+        android:translateX="100"
+        android:translateY="100">
+        <path
+            android:name="pathSpinnerIn"
+            android:fillColor="@android:color/transparent"
+            android:pathData="M-24,0 A24,24 0 1,0 24,0 A24,24 0 1,0 -24,0"
+            android:strokeColor="@color/spinner_in"
+            android:strokeLineCap="square"
+            android:strokeLineJoin="miter"
+            android:strokeWidth="3"
+            android:trimPathEnd="0.03"
+            android:trimPathOffset="0"
+            android:trimPathStart="0"/>
+    </group>
+
+</vector>

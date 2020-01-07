@@ -1,0 +1,15 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/vd_balls">
+    <target
+        android:name="bluePath"
+        android:animation="@animator/ball_jump_blue" />
+
+    <target
+        android:name="redPath"
+        android:animation="@animator/ball_jump_red" />
+
+    <target
+        android:name="greenPath"
+        android:animation="@animator/ball_jump_green" />
+
+</animated-vector>

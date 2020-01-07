@@ -1,0 +1,46 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="96dp"
+            android:height="96dp"
+            android:viewportWidth="96"
+            android:viewportHeight="96">
+            <group
+                android:name="groupspinner"
+                android:translateX="48"
+                android:translateY="48">
+                <path
+                    android:name="pathspinner"
+                    android:pathData="M 0 0 M 30 0 C 30 7.953 26.837 15.589 21.213 21.213 C 15.589 26.837 7.953 30 0 30 C -7.953 30 -15.589 26.837 -21.213 21.213 C -26.837 15.589 -30 7.953 -30 0 C -30 -7.953 -26.837 -15.589 -21.213 -21.213 C -15.589 -26.837 -7.953 -30 0 -30 C 7.953 -30 15.589 -26.837 21.213 -21.213 C 26.837 -15.589 30 -7.953 30 0"
+                    android:strokeWidth="6"
+                    android:strokeColor="@color/spinner_out"
+                    android:strokeLineCap="square"/>
+            </group>
+            <group
+                android:name="groupsquare"
+                android:translateX="48"
+                android:translateY="48">
+                <path
+                    android:name="pathsquare"
+                    android:pathData="M 0 0 M 30 0 L 30 30 L -30 30 L -30 -30 L 30 -30 Z"
+                    android:strokeWidth="6"
+                    android:strokeColor="@color/spinner_out"
+                    android:strokeLineCap="square"/>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="pathspinner">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:duration="100"
+                android:valueFrom="M 0 0 M 30 0 C 30 7.953 26.837 15.589 21.213 21.213 C 15.589 26.837 7.953 30 0 30 C -7.953 30 -15.589 26.837 -21.213 21.213 C -26.837 15.589 -30 7.953 -30 0 C -30 -7.953 -26.837 -15.589 -21.213 -21.213 C -15.589 -26.837 -7.953 -30 0 -30 C 7.953 -30 15.589 -26.837 21.213 -21.213 C 26.837 -15.589 30 -7.953 30 0"
+                android:valueTo="M 0 0 M 30 0 C 30 10 30 20 30 30 C 20 30 10 30 0 30 C -10 30 -20 30 -30 30 C -30 20 -30 10 -30 0 C -30 -10 -30 -20 -30 -30 C -20 -30 -10 -30 0 -30 C 10 -30 20 -30 30 -30 C 30 -20 30 -10 30 0"
+                android:valueType="pathType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+</animated-vector>
