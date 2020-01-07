@@ -33,7 +33,7 @@
             <objectAnimator
                 android:duration="500"
                 android:propertyName="trimPathEnd"
-                android:startOffset="5500"
+                android:startOffset="6000"
                 android:valueFrom="0"
                 android:valueTo="1"
                 android:valueType="floatType" />
@@ -46,7 +46,7 @@
             <objectAnimator
                 android:duration="1000"
                 android:propertyName="trimPathEnd"
-                android:startOffset="6000"
+                android:startOffset="6500"
                 android:valueFrom="0"
                 android:valueTo="1"
                 android:valueType="floatType" />

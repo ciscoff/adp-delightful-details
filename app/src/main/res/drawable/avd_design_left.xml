@@ -40,7 +40,7 @@
         </vector>
     </aapt:attr>
 
-    <!-- Перемещение LineOut по экрану [end: 1000 ms] -->
+    <!-- Перемещение Line по экрану [end: 1000 ms] -->
     <target android:name="groupLineOut">
         <aapt:attr name="android:animation">
             <!-- ENTER: Перемещение слева к центру -->
@@ -53,7 +53,7 @@
         </aapt:attr>
     </target>
 
-    <!-- Превращение LineOut в круг и уход с экрана [end: 1500 ms] -->
+    <!-- Превращение Line в Spinner и уход pathLineOut с экрана [end: 1550 ms] -->
     <target android:name="pathLineOut">
         <aapt:attr name="android:animation">
             <set android:ordering="sequentially">
@@ -70,52 +70,47 @@
                     android:propertyName="trimPathEnd"
                     android:valueFrom="1"
                     android:valueTo="0"
-                    android:valueType="floatType"/>
+                    android:valueType="floatType" />
             </set>
         </aapt:attr>
     </target>
 
-        <!-- Перемещение спинера SpinnerOut по экрану -->
-        <target android:name="groupSpinnerOut">
-            <aapt:attr name="android:animation">
-                <set android:ordering="sequentially">
-                    <!-- ENTER: Перемещение слева к центру -->
-                    <set android:ordering="together">
-                        <!-- Выход на экран -->
-<!--                        <objectAnimator-->
-<!--                            android:duration="500"-->
-<!--                            android:propertyName="translateX"-->
-<!--                            android:valueFrom="-200"-->
-<!--                            android:valueTo="100" />-->
-                        <objectAnimator
-                            android:duration="2000"
-                            android:startOffset="1500"
-                            android:interpolator="@android:anim/linear_interpolator"
-                            android:propertyName="rotation"
-                            android:valueFrom="0"
-                            android:valueTo="-360"
-                            android:valueType="floatType" />
-                    </set>
-                    <!-- EXIT: Перемещение от центра (вправо-вверх)-->
-                    <set android:ordering="together">
-                        <objectAnimator
-                            android:duration="500"
-                            android:propertyName="translateX"
-                            android:startOffset="5700"
-                            android:valueFrom="100"
-                            android:valueTo="120" />
-                        <objectAnimator
-                            android:duration="500"
-                            android:propertyName="translateY"
-                            android:startOffset="5700"
-                            android:valueFrom="100"
-                            android:valueTo="80" />
-                    </set>
+    <!-- Модификации Spinner'а -->
+    <!-- Дополнительное вращение вначале и превращение в квадрат в конце -->
+    <target android:name="groupSpinnerOut">
+        <aapt:attr name="android:animation">
+            <set android:ordering="sequentially">
+                <!-- Начало вращения [end: 3500 ms]-->
+                <set>
+                    <objectAnimator
+                        android:duration="2000"
+                        android:interpolator="@android:anim/linear_interpolator"
+                        android:propertyName="rotation"
+                        android:startOffset="1500"
+                        android:valueFrom="0"
+                        android:valueTo="-360"
+                        android:valueType="floatType" />
                 </set>
-            </aapt:attr>
-        </target>
+                <!-- EXIT: После превращения в квадрат перемещение от центра (вправо-вверх)-->
+                <set android:ordering="together">
+                    <objectAnimator
+                        android:duration="500"
+                        android:propertyName="translateX"
+                        android:startOffset="2200"
+                        android:valueFrom="100"
+                        android:valueTo="120" />
+                    <objectAnimator
+                        android:duration="500"
+                        android:propertyName="translateY"
+                        android:startOffset="2200"
+                        android:valueFrom="100"
+                        android:valueTo="80" />
+                </set>
+            </set>
+        </aapt:attr>
+    </target>
 
-    <!-- Вращение внешнего спиннера -->
+    <!-- Вращение Spinner'a [start: 1500, end: 4500]-->
     <target android:name="pathSpinnerOut">
         <aapt:attr name="android:animation">
             <set android:ordering="sequentially">
@@ -123,13 +118,12 @@
                 <set>
                     <objectAnimator
                         android:duration="50"
-                        android:startOffset="1450"
                         android:propertyName="trimPathEnd"
+                        android:startOffset="1450"
                         android:valueFrom="0.0"
                         android:valueTo="0.03"
-                        android:valueType="floatType"/>
+                        android:valueType="floatType" />
                 </set>
-
                 <!-- Вращение спиннера -->
                 <set android:ordering="together">
                     <!-- "Хвост" медленно стартует, а в конце быстро догоняет голову-->
