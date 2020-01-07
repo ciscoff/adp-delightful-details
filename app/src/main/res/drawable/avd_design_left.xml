@@ -47,14 +47,14 @@
                         android:valueTo="-360"
                         android:valueType="floatType"/>
                 </set>
-                <!-- EXIT: Перемещение от центра -->
+                <!-- EXIT: Перемещение от центра (вправо-вверх)-->
                 <set android:ordering="together">
                     <objectAnimator
                         android:duration="500"
                         android:propertyName="translateX"
                         android:startOffset="3000"
                         android:valueFrom="100"
-                        android:valueTo="90" />
+                        android:valueTo="120" />
                     <objectAnimator
                         android:duration="500"
                         android:propertyName="translateY"

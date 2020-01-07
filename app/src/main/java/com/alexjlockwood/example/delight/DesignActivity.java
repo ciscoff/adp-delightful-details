@@ -17,5 +17,7 @@ public class DesignActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         ((Animatable) ((ImageView) findViewById(R.id.designIconLeft)).getDrawable()).start();
         ((Animatable) ((ImageView) findViewById(R.id.designIconRight)).getDrawable()).start();
+        ((Animatable) ((ImageView) findViewById(R.id.textIcon)).getDrawable()).start();
+
     }
 }
