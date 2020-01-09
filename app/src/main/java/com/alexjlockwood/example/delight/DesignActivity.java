@@ -8,7 +8,9 @@ import android.widget.ImageView;
 import butterknife.ButterKnife;
 
 public class DesignActivity extends AppCompatActivity {
-
+    /**
+     * https://stackoverflow.com/questions/41767676/how-to-restart-android-animatedvectordrawables-animations
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
