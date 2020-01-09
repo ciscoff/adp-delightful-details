@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_point1"
+        android:drawable="@drawable/vd_point1"
+        app:state_point1="true" />
+
+    <item
+        android:id="@+id/item_point2"
+        android:drawable="@drawable/vd_point2"
+        app:state_point2="true"/>
+
+    <item
+        android:id="@+id/item_point3"
+        android:drawable="@drawable/vd_point3"
+        app:state_point3="true" />
+
+    <item
+        android:id="@+id/item_point4"
+        android:drawable="@drawable/vd_point4"/>
+
+    <transition
+        android:drawable="@drawable/avd_p1_to_p2"
+        android:fromId="@id/item_point1"
+        android:toId="@id/item_point2" />
+
+    <transition
+        android:drawable="@drawable/avd_p2_to_p3"
+        android:fromId="@id/item_point2"
+        android:toId="@id/item_point3" />
+
+    <transition
+        android:drawable="@drawable/avd_p3_to_p4"
+        android:fromId="@id/item_point3"
+        android:toId="@id/item_point4" />
+
+    <transition
+        android:drawable="@drawable/avd_p4_to_p1"
+        android:fromId="@id/item_point4"
+        android:toId="@id/item_point1" />
+</animated-selector>

@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     static {
         LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.design, DesignActivity.class);
         LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.spinner, SpinnerActivity.class);
+        LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.points, PointsActivity.class);
         LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.writer, WriterActivity.class);
         LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.globus, GlobusActivity.class);
         LIST_ITEM_TO_ACTIVITY_MAP.put(R.id.my, MyHandwritingActivity.class);
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({
             R.id.design,
             R.id.spinner,
+            R.id.points,
             R.id.my,
             R.id.writer,
             R.id.globus,

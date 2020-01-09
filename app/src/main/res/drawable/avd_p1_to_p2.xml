@@ -1,0 +1,41 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/vd_point1">
+
+    <target android:name="groupActivePoint1">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="@integer/scale_duration"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"
+                    android:propertyName="scaleX"
+                    android:repeatCount="1"
+                    android:repeatMode="reverse"
+                    android:valueFrom="1.0"
+                    android:valueTo="2.0"
+                    android:valueType="floatType" />
+                <objectAnimator
+                    android:duration="@integer/scale_duration"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"
+                    android:propertyName="scaleY"
+                    android:repeatCount="1"
+                    android:repeatMode="reverse"
+                    android:valueFrom="1.0"
+                    android:valueTo="2.0"
+                    android:valueType="floatType" />
+            </set>
+        </aapt:attr>
+    </target>
+    <!--    <target android:name="pathActivePoint">-->
+    <!--        <aapt:attr name="android:animation">-->
+    <!--            <objectAnimator-->
+    <!--                android:duration="300"-->
+    <!--                android:interpolator="@android:interpolator/fast_out_slow_in"-->
+    <!--                android:propertyName="fillColor"-->
+    <!--                android:repeatMode="reverse"-->
+    <!--                android:valueFrom="@android:color/darker_gray"-->
+    <!--                android:valueTo="@android:color/holo_red_dark"-->
+    <!--                android:valueType="colorType" />-->
+    <!--        </aapt:attr>-->
+    <!--    </target>-->
+</animated-vector>
