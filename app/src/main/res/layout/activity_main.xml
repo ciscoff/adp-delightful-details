@@ -31,6 +31,14 @@
             android:text="@string/points" />
 
         <TextView
+            android:id="@+id/movingPoints"
+            style="@style/MainActivityListItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/moving_points" />
+
+
+        <TextView
             android:id="@+id/balls"
             style="@style/MainActivityListItem"
             android:layout_width="match_parent"
