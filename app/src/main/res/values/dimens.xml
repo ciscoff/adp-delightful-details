@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="scale_from" format="float" type="dimen">1.0</dimen>
-    <dimen name="scale_to" format="float" type="dimen">1.2</dimen>
-
-
-    <integer name="scale_duration">300</integer>
+    <dimen name="scale_to" format="float" type="dimen">2.0</dimen>
+    <integer name="scale_duration">400</integer>
 
 </resources>
