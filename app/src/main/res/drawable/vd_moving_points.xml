@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="24dp"
+    android:viewportWidth="200.0"
+    android:viewportHeight="24.0">
+
+    <group android:name="point1" android:translateX="2" android:translateY="12">
+        <path
+            android:fillColor="@android:color/darker_gray"
+            android:pathData="M0,0 c1.1,0 2,0.9 2,2s-0.9,2 -2,2 -2,-0.9 -2,-2 0.9,-2 2,-2z" />
+    </group>
+
+    <group android:name="point2" android:translateX="6" android:translateY="12">
+        <path
+            android:fillColor="@android:color/darker_gray"
+            android:pathData="M0,0 c1.1,0 2,0.9 2,2s-0.9,2 -2,2 -2,-0.9 -2,-2 0.9,-2 2,-2z" />
+    </group>
+
+    <group android:name="point3" android:translateX="10" android:translateY="12">
+        <path
+            android:fillColor="@android:color/darker_gray"
+            android:pathData="M0,0 c1.1,0 2,0.9 2,2s-0.9,2 -2,2 -2,-0.9 -2,-2 0.9,-2 2,-2z" />
+    </group>
+
+    <group android:name="point4" android:translateX="14" android:translateY="12">
+        <path
+            android:fillColor="@android:color/darker_gray"
+            android:pathData="M0,0 c1.1,0 2,0.9 2,2s-0.9,2 -2,2 -2,-0.9 -2,-2 0.9,-2 2,-2z" />
+    </group>
+</vector>

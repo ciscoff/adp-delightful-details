@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PointsStates">
+        <attr name="state_point1" format="boolean"/>
+        <attr name="state_point2" format="boolean"/>
+        <attr name="state_point3" format="boolean"/>
+        <attr name="state_point4" format="boolean"/>
+    </declare-styleable>
+
+
+</resources>

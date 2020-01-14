@@ -4,6 +4,8 @@
   <string name="play">Play</string>
   <string name="spinner">Spinner</string>
   <string name="design">Design</string>
+  <string name="points">Points</string>
+  <string name="moving_points">Moving Points</string>
   <string name="globus">Globus</string>
   <string name="writer">Writer</string>
   <string name="pause">Pause</string>
